@@ -1,0 +1,166 @@
+/*HTML BG*/
+body {
+    /* background-color: #4f4f4f; */
+    background-color: black;
+
+}
+
+
+#enter-text {
+    position:absolute;
+    top:150px;
+    left: 50%;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+    color: black;
+    user-select: none;
+}
+
+@keyframes dark {
+    from {
+        color:black
+    } to {
+        color:#DB232C
+    }
+}
+
+@keyframes id {
+    from {
+        opacity: 100%;
+    } to {
+        opacity: 0;
+    }
+}
+
+@keyframes light {
+    from {
+        color:black
+    } to {
+        color:#04d9ff;
+    }
+}
+
+/* style for every button*/
+#flex {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    position: absolute;
+    top:200px;
+    opacity: 0;
+    left:calc(50% - 300px)
+}
+#flex div {
+    display: block;
+    position: relative;
+    user-select: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 2px;
+    transition-duration: .4s;
+    overflow: hidden;
+    cursor:pointer;
+    width: max-content;
+    padding: 15px;
+}
+#flex div span {
+    display: block;
+    position: absolute
+}
+#flex div .span1 {
+    height: 3px;
+    width: 100%;
+    top: 0;
+    left: -100%;
+}
+#flex div .span2 {
+    height: 100%;
+    width: 3px;
+    right: 0;
+    top: -100%;
+}
+#flex div .span3 {
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+    right: -100%;
+}
+#flex div .span4 {
+    height: 100%;
+    width: 3px;
+    left: 0;
+    bottom: -100%;
+}
+#flex div:hover span {
+    transition-duration: .6s;
+}
+#flex div:hover .span1 {
+    left: 100%;
+}
+#flex div:hover .span2 {
+    top: 100%;
+    transition-delay: .3s;
+}
+#flex div:hover .span3 {
+    right: 100%;
+}
+#flex div:hover .span4 {
+    bottom: 100%;
+    transition-delay: .3s;
+}
+#flex div:hover {
+    color: rgba(255, 255, 255, 0.8);
+    transition-delay: .4s;
+    text-shadow: none   ;
+    transition-duration: .2s;
+}
+/*BUTTON 1 STYLE*/
+.button {
+    color: #04d9ff;
+    text-shadow: 0 0 20px blue, 0 0 40px blue;;
+}
+.button .span1 {
+    background: linear-gradient(to right, transparent, #04d9ff);
+}
+.button .span2 {
+    background: linear-gradient(to bottom, transparent, #04d9ff);
+}
+.button .span3 {
+    background: linear-gradient(to left, transparent, #04d9ff);
+}
+.button .span4 {
+    background: linear-gradient(to top, transparent, #04d9ff);
+}
+.button:hover {
+    background-color: #04d9ff;
+    box-shadow: 0 0 10px #04d9ff, 0 0 40px #04d9ff, 0 0 60px #04d9ff;
+}
+
+
+/*BUTTON 2 STYLE*/
+.button2 {
+    color: #DB232C;
+    text-shadow: 0 0 20px red;
+    
+}
+.button2 .span1 {
+    background: linear-gradient(to right, transparent, #DB232C);
+}
+.button2 .span2{
+    background: linear-gradient(to bottom, transparent, #DB232C);
+}
+.button2 .span3 {
+    background: linear-gradient(to left, transparent, #DB232C);
+}
+.button2 .span4 {
+    background: linear-gradient(to top, transparent, #DB232C);
+}
+.button2:hover {
+    background-color: #DB232C;
+    box-shadow: 0 0 10px #DB232C, 0 0 40px #DB232C, 0 0 60px #DB232C;
+}

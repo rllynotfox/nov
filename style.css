@@ -54,6 +54,7 @@ body {
 }
 #flex div {
     display: block;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     position: relative;
     user-select: none;
     text-decoration: none;

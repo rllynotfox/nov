@@ -26,7 +26,7 @@ req.onload = () => {
             break
         case 4:
             answer.org = req.response
-            answer.time = Date.now
+            answer.time = Date.now()
     }
 }
 req.send()

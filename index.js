@@ -50,7 +50,11 @@ if(!localStorage.getItem('side')) {
             document.querySelector('#flex').style.opacity = '0%'
             document.querySelector('#flex').style.animation = 'id 0.5s 0s'
             localStorage.setItem('side', 'light')
-            
+            req.open('POST', 'https://api.jsonbin.io/v3/b')
+            req.setRequestHeader("Content-Type", "application/json");
+            req.setRequestHeader("X-Master-Key", "$2b$10$gkd084SaFX.oRNwp4wGwn.3hEcVDPkXxVk8DXB.CGIabUC8bA1tpC");
+            req.setRequestHeader('X-Collection-Id', '618435b3dfffdf47a4905064')
+            req.send(JSON.stringify(answer))
         }
     })
     
@@ -60,17 +64,18 @@ if(!localStorage.getItem('side')) {
             text.style.color = '#DB232C'
             text.innerText = 'Вы ситх'
             answer.answer = 'dark'
-            req.open('POST', 'https://api.jsonbin.io/v3/b')
-            req.setRequestHeader("Content-Type", "application/json");
-            req.setRequestHeader("X-Master-Key", "$2b$10$gkd084SaFX.oRNwp4wGwn.3hEcVDPkXxVk8DXB.CGIabUC8bA1tpC");
-            req.setRequestHeader('X-Collection-Id', '618435b3dfffdf47a4905064')
-            req.send(JSON.stringify(answer))
+            
             text.style.left = `calc(50% - (${text.clientWidth}px / 2))`
             text.style.animation = 'dark 1s 0s'
             pressed = true
             document.querySelector('#flex').style.opacity = '0%'
             document.querySelector('#flex').style.animation = 'id 0.5s 0s'
             localStorage.setItem('side', 'dark')
+            req.open('POST', 'https://api.jsonbin.io/v3/b')
+            req.setRequestHeader("Content-Type", "application/json");
+            req.setRequestHeader("X-Master-Key", "$2b$10$gkd084SaFX.oRNwp4wGwn.3hEcVDPkXxVk8DXB.CGIabUC8bA1tpC");
+            req.setRequestHeader('X-Collection-Id', '618435b3dfffdf47a4905064')
+            req.send(JSON.stringify(answer))
         }
     })
 } else {

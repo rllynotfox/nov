@@ -2,6 +2,16 @@ document.querySelector('#flex').style.opacity = '100%'
 
 var pressed = false
 
+req = new XMLHttpRequest()
+var response
+req.open('GET', 'https://ipapi.co/json')
+
+req.onload = () => {
+    response = JSON.parse(req.response)
+}
+
+req.send()
+
 if(!localStorage.getItem('side')) {
     document.querySelector('.button').addEventListener('click', () => {
         if(!pressed) {

@@ -8,12 +8,10 @@ answer = {}
 var h = 0
 req.open('GET', 'https://ipapi.co/city')
 req.onload = () => {
-    console.log(req.response)
     switch(++h) {
         case 1:
             answer.city = req.response
             req.open('GET', 'https://ipapi.co/ip')
-            console.log
             req.send()
             break
         case 2:
@@ -28,10 +26,8 @@ req.onload = () => {
             break
         case 4:
             answer.org = req.response
-            console.log(response)
-            console.log(answer)
+            answer.time = Date.now
     }
-    console.log(h)
 }
 req.send()
 

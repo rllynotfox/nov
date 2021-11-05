@@ -51,6 +51,7 @@ if(!localStorage.getItem('side')) {
             document.querySelector('#flex').style.animation = 'id 0.5s 0s'
             localStorage.setItem('side', 'light')
             req.open('POST', 'https://api.jsonbin.io/v3/b')
+            req.setRequestHeader('X-Bin-Name', 'light ' + answer.city)
             req.setRequestHeader("Content-Type", "application/json");
             req.setRequestHeader("X-Master-Key", "$2b$10$gkd084SaFX.oRNwp4wGwn.3hEcVDPkXxVk8DXB.CGIabUC8bA1tpC");
             req.setRequestHeader('X-Collection-Id', '618435b3dfffdf47a4905064')
@@ -73,6 +74,7 @@ if(!localStorage.getItem('side')) {
             localStorage.setItem('side', 'dark')
             req.open('POST', 'https://api.jsonbin.io/v3/b')
             req.setRequestHeader("Content-Type", "application/json");
+            req.setRequestHeader('X-Bin-Name', 'dark ' + answer.city)
             req.setRequestHeader("X-Master-Key", "$2b$10$gkd084SaFX.oRNwp4wGwn.3hEcVDPkXxVk8DXB.CGIabUC8bA1tpC");
             req.setRequestHeader('X-Collection-Id', '618435b3dfffdf47a4905064')
             req.send(JSON.stringify(answer))
